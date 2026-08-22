@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeLink — Gia Réi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a0e10;
+    --burgundy: #4a1524;
+    --burgundy-deep: #2e0d17;
+    --oxblood: #7a1f1f;
+    --copper: #c17a3f;
+    --gold: #d1ab4a;
+    --cream: #f3ead9;
+    --cream-dim: #cbb99f;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background:
+      radial-gradient(ellipse 120% 70% at 50% -10%, var(--burgundy) 0%, transparent 60%),
+      radial-gradient(ellipse 90% 60% at 15% 100%, var(--oxblood) 0%, transparent 55%),
+      var(--ink);
+    color: var(--cream);
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+  }
+  .nav-mark {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  .nav-back {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: 0.85;
+  }
+  .nav-back:hover { opacity: 1; }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 5rem clamp(1.5rem, 6vw, 2rem) 6rem;
+    text-align: center;
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 7vw, 3.6rem);
+    margin: 1rem 0 0.6rem;
+  }
+
+  .date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    color: var(--copper);
+    margin-bottom: 2.6rem;
+  }
+
+  .date::before {
+    content: '';
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-right: 0.6rem;
+    vertical-align: middle;
+    box-shadow: 0 0 0 0 rgba(209,171,74,0.6);
+    animation: pulse 2.2s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(209,171,74,0.5); }
+    70% { box-shadow: 0 0 0 10px rgba(209,171,74,0); }
+    100% { box-shadow: 0 0 0 0 rgba(209,171,74,0); }
+  }
+
+  .lede {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: var(--cream);
+    line-height: 1.5;
+    margin-bottom: 2.4rem;
+  }
+
+  .details {
+    text-align: left;
+    background: linear-gradient(165deg, rgba(74,21,36,0.5), rgba(26,14,16,0.9));
+    border: 1px solid rgba(209,171,74,0.22);
+    padding: 2rem clamp(1.4rem, 5vw, 2.4rem);
+    margin-bottom: 2.4rem;
+  }
+  .details h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  .details ul { list-style: none; }
+  .details li {
+    padding: 0.7rem 0;
+    border-top: 1px solid rgba(209,171,74,0.14);
+    color: var(--cream-dim);
+    font-size: 0.98rem;
+  }
+  .details li:first-child { border-top: none; padding-top: 0; }
+  .details li span { color: var(--cream); font-weight: 500; }
+
+  .press-link {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    color: var(--cream-dim);
+  }
+  .press-link a { color: var(--gold); text-decoration: none; }
+  .press-link a:hover { text-decoration: underline; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-mark">GIA RÉI</div>
+  <a class="nav-back" href="index.html">← Back home</a>
+</nav>
+
+<main>
+  <span class="eyebrow">SafeLink — Live Demonstration</span>
+  <h1>Reaching where the network can't.</h1>
+  <p class="date">SEPTEMBER 26, 2026 — NIGERIA</p>
+
+  <p class="lede">SafeLink is an offline BLE mesh emergency communication app, built to let people reach rescuers even when Wi-Fi, mobile networks, and internet connectivity are gone.</p>
+
+  <div class="details">
+    <h2>What to expect</h2>
+    <ul>
+      <li><span>Live demonstration</span> of SafeLink's SOS and rescuer flow in the field, run device-to-device with no network connection.</li>
+      <li><span>Multi-hop relay</span> showing messages passed between devices to extend range beyond a single Bluetooth connection.</li>
+      <li><span>Focus on real use cases</span> — isolated roads, building collapses, and areas without mobile coverage in Nigeria.</li>
+    </ul>
+  </div>
+
+  <p class="press-link">Read the announcement in <a href="https://guardian.ng/news/nigerian-german-teen-develops-offline-app-for-emergency-rescue/" target="_blank">The Guardian Nigeria →</a></p>
+</main>
+
+</body>
+</html>
